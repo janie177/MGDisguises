@@ -32,7 +32,7 @@ public class DisguiseCommand implements CommandExecutor
 
         Player p = (Player) s;
 
-        if(!p.hasPermission("minegusta.disguise") || !p.hasPermission("minegusta.disguise.special"))
+        if(!p.hasPermission("minegusta.disguise") && !p.hasPermission("minegusta.disguise.special"))
         {
             sendString(p, ChatColor.RED + "You cannot use that!");
             return true;
