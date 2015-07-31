@@ -1,0 +1,21 @@
+main: com.minegusta.mgdisguises.Main
+name: MGDisguises
+author: janie177
+version: ${project.version}
+commands:
+  disguise:
+    description: Disguise yourself!
+    usage: /Disguise [Entity/Player/Block]
+    aliases: [d, transform, dg]
+    permission: minegusta.disguise
+  undisguise:
+    description: Clear your disguises.
+    alisases: [ud, u, normal]
+
+permissions:
+  minegusta.disguise:
+    default: op
+    description: Allows you to disguise as stuff.
+  minegusta.disguise.special:
+    default: op
+    description: Allows you to disguise as special things. Woosh!
