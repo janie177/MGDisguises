@@ -2,6 +2,7 @@ main: com.minegusta.mgdisguises.Main
 name: MGDisguises
 author: janie177
 version: ${project.version}
+depend: [LibsDisguises, ProtocolLib]
 commands:
   disguise:
     description: Disguise yourself!
