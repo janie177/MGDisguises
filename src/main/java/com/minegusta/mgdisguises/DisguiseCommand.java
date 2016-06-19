@@ -2,7 +2,6 @@ package com.minegusta.mgdisguises;
 
 import com.google.common.collect.Lists;
 import me.libraryaddict.disguise.DisguiseAPI;
-import me.libraryaddict.disguise.LibsDisguises;
 import me.libraryaddict.disguise.disguisetypes.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -11,9 +10,7 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.Player;
 
 import java.util.List;
@@ -114,13 +111,14 @@ public class DisguiseCommand implements CommandExecutor
             {
                 if(disguise.isAlive())
                 {
-                    DisguiseAPI.disguiseToAll(p, new MobDisguise(disguise));
+                    DisguiseAPI.disguiseToAll(p, new MobDisguise(DisguiseType.getType(disguise)));
                     sendString(p, ChatColor.GREEN + "You disguised as a " + disguise.getName() + ".");
                     return true;
                 }
                 else
                 {
-                    DisguiseAPI.disguiseToAll(p, new MiscDisguise(disguise));
+
+                    DisguiseAPI.disguiseToAll(p, new MiscDisguise(DisguiseType.getType(disguise)));
                     sendString(p, ChatColor.GREEN + "You disguised as a " + disguise.getName() + ".");
                     return true;
                 }
@@ -129,13 +127,13 @@ public class DisguiseCommand implements CommandExecutor
             {
                 if(disguise.isAlive())
                 {
-                    DisguiseAPI.disguiseToAll(p, new MobDisguise(disguise));
+                    DisguiseAPI.disguiseToAll(p, new MobDisguise(DisguiseType.getType(disguise)));
                     sendString(p, ChatColor.GREEN + "You disguised as a " + disguise.getName() + ".");
                     return true;
                 }
                 else
                 {
-                    DisguiseAPI.disguiseToAll(p, new MiscDisguise(disguise));
+                    DisguiseAPI.disguiseToAll(p, new MiscDisguise(DisguiseType.getType(disguise)));
                     sendString(p, ChatColor.GREEN + "You disguised as a " + disguise.getName() + ".");
                     return true;
                 }
